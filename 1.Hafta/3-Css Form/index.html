@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .formElement{
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px 0px;
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+        .formElement:focus{
+            background-color: lightblue;
+        }
+        .formSubmit{
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: lightblue;
+            border:none;
+            color: white;
+        }
+        .formGeneral{
+            background-color: lightgrey;
+            padding: 20px;
+            margin: 10px 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form class="formGeneral">
+        <label for="">Ad:</label>
+        <input type="text" class="formElement" name="firstname" placeholder="Adiniz giriniz">
+        <label for="">Soyad:</label>
+        <input type="text" class="formElement" name="lastname" placeholder="Soyadiniz giriniz">
+        <label for="">Ulkeler:</label>
+        <select name="country" class="formElement">
+            <option value="tr">Turkiye</option>
+            <option value="fr">Fransa</option>
+            <option value="en">Ingiltere</option>
+        </select>
+        <input type="submit" value="Kaydet" class="formSubmit">
+    </form>
+</body>
+</html>

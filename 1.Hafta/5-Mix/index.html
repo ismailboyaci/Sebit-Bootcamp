@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .imgMainDiv {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+      }
+      .imgDiv {
+        border: 1px solid black;
+        width: 200px;
+        border-radius: 30px;
+        margin-right: 30px;
+      }
+      .efso {
+        width: 100%;
+        border-radius: 30px 30px 0 0;
+      }
+      .imgDiv h3 {
+        text-align: center;
+      }
+      .imgDiv p {
+        padding: 0px 20px;
+      }
+      .formElement {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 10px 0px;
+        box-sizing: border-box;
+        border: 1px solid red;
+      }
+      .formElement {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 8px 0px;
+        box-sizing: border-box;
+        border: 1px solid red;
+      }
+
+      .formElement:focus {
+        background-color: lightgreen;
+      }
+
+      .formSubmit {
+        width: 100%;
+        padding: 13px;
+        background-color: lightgreen;
+        border: none;
+        border-radius: 15px;
+        color: white;
+      }
+
+      .formGeneral {
+        background-color: lightgray;
+        padding: 20px;
+        margin: 10px 350px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        background-color: pink;
+        padding: 0px 15px;
+      }
+      .header img {
+        border-radius: 5px;
+      }
+      .header a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin-right: 13px;
+      }
+      .footer {
+        background-color: lightcoral;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 20px;
+      }
+      @media only screen and (max-width: 600px) {
+        .imgMainDiv {
+          flex-direction: column;
+        }
+        .imgDiv {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .formGeneral {
+          margin: 0px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div>
+        <img src="1.jpg" width="40px" />
+      </div>
+      <div>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </div>
+    </div>
+
+    <div
+      style="
+        background-image: url('../image/banner.jpg');
+        height: 400px;
+        position: relative;
+      "
+    >
+      <div
+        style="position: absolute; text-align: center; width: 100%; top: 38px"
+      >
+        <h3>Efsane Banner</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus
+          provident corrupti iure, animi eligendi, unde repellendus nisi autem
+          veritatis possimus esse officia, nobis nemo obcaecati expedita itaque
+          sunt iusto.
+        </p>
+      </div>
+    </div>
+
+    <div class="imgMainDiv">
+      <div class="imgDiv">
+        <img src="1.jpg" class="efso" />
+        <h3>Efso Baslik</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+          laudantium praesentium vel natus eligendi vero, officiis id
+          exercitationem totam deleniti ipsa. Quisquam, fuga! Rem fugit
+          voluptatibus facilis, obcaecati adipisci unde.
+        </p>
+      </div>
+      <div class="imgDiv">
+        <img src="2.jpg" class="efso" />
+        <h3>Efso Baslik</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+          laudantium praesentium vel natus eligendi vero, officiis id
+          exercitationem totam deleniti ipsa. Quisquam, fuga! Rem fugit
+          voluptatibus facilis, obcaecati adipisci unde.
+        </p>
+      </div>
+      <div class="imgDiv">
+        <img src="3.jpg" class="efso" />
+        <h3>Efso Baslik</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+          laudantium praesentium vel natus eligendi vero, officiis id
+          exercitationem totam deleniti ipsa. Quisquam, fuga! Rem fugit
+          voluptatibus facilis, obcaecati adipisci unde.
+        </p>
+      </div>
+      <div class="imgDiv">
+        <img src="4.jpg" class="efso" />
+        <h3>Efso Baslik</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+          laudantium praesentium vel natus eligendi vero, officiis id
+          exercitationem totam deleniti ipsa. Quisquam, fuga! Rem fugit
+          voluptatibus facilis, obcaecati adipisci unde.
+        </p>
+      </div>
+    </div>
+    <div>
+      <form class="formGeneral">
+        <label for="">Ad:</label>
+        <input
+          type="text"
+          class="formElement"
+          name="firstname"
+          placeholder="Adiniz giriniz"
+        />
+        <label for="">Soyad:</label>
+        <input
+          type="text"
+          class="formElement"
+          name="lastname"
+          placeholder="Soyadiniz giriniz"
+        />
+        <label for="">Ulkeler:</label>
+        <select name="country" class="formElement">
+          <option value="tr">Turkiye</option>
+          <option value="fr">Fransa</option>
+          <option value="en">Ingiltere</option>
+        </select>
+        <input type="submit" value="Kaydet" class="formSubmit" />
+      </form>
+    </div>
+
+    <div class="footer">
+      <h3>FrontEnd && Tum Haklari Saklidir</h3>
+    </div>
+  </body>
+</html>
