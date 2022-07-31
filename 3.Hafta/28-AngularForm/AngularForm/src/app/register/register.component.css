@@ -1,0 +1,25 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+.mat-toolbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+
+/* .loginForm {
+  display: flex;
+  flex-direction: column;
+} */
+
+.formDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}

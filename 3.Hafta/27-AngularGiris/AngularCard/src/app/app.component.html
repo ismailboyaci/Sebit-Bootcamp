@@ -1,0 +1,51 @@
+<!-- <div>
+  <p>
+    Ilk Angular Proje
+  </p>
+  {{ismail}}
+</div> -->
+
+<!-- <div *ngIf="isUpdate">
+  True ise
+</div>
+<div *ngIf="!isUpdate">
+  False ise
+</div> -->
+
+<!-- <div *ngFor="let post of posts">
+  {{ post.title }}
+</div> -->
+
+<!--<div class="container">
+  <div class="row my-5">
+    <div class="col-md-4" *ngFor="let item of posts">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="item.imageUrl" />
+        <img mat-card-image src="{{item.imageUrl}}" />
+        <mat-card-content>
+          <h3> {{item.username}} </h3>
+          <p>
+            {{ item.content }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>-->
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col-md-4" *ngFor="let post of posts">
+      <!-- <app-card
+        [titleChild]="post.title"
+        [imageUrlChild]="post.imageUrl"
+        [usernameChild]="post.username"
+        [contentChild]="post.content"
+      ></app-card> -->
+      <app-card [post]="post"></app-card>
+    </div>
+  </div>
+</div>
