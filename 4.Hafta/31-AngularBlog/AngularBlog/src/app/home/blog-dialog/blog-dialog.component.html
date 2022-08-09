@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-between">
+  <div class="d-flex align-items-center">
+    <h3 style="margin:0 ;">{{isUpdate ? 'Yaziyi Guncelle':'Yaziyi gor'}}</h3>
+  </div>
+  <button mat-button style="font-size: 24px;" (click)="close()">x</button>
+</div>
+
+<form *ngIf="isUpdate" [formGroup]="blogForm" class="example-form">
+  <mat-form-field class="example-full-width" >
+    <mat-label>Blog Basligi</mat-label>
+    <input matInput formControlName="title">
+    <mat-error *ngIf="blogForm.get('title')?.hasError('required')">
+      Baslik Zorunludur
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" >
+    <mat-label>Blog Icerigi</mat-label>
+    <textarea matInput formControlName="body" cols="40" rows="10"></textarea>
+    <mat-error *ngIf="blogForm.get('body')?.hasError('required')">
+      Blog Icerigi Zorunludur
+    </mat-error>
+  </mat-form-field>
+  <div>
+    <button mat-raised-button color="primary" [disabled]="!blogForm.valid" (click)="onSubmit()">Guncelle</button>
+  </div>
+</form>

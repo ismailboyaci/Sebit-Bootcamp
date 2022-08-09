@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="my-5">
+    <h2>Blog Sitesi</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eum nam
+      odit libero recusandae molestiae fugiat, unde vero debitis vitae
+      repellendus consectetur hic corporis ut praesentium quidem ipsum, ex
+      explicabo.
+    </p>
+  </div>
+  <div class="row">
+    <div
+      class="col-lg-3 col-sm-6 mt-3"
+      *ngFor="
+        let post of blogData | slice: (page - 1) * pageSize:page * pageSize
+      "
+    >
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title
+            style="
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            "
+            >{{ post.title }}</mat-card-title
+          >
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="../../assets/images/image{{ post.imageId }}.jpg"
+        />
+        <mat-card-content>
+          <p
+            style="
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            "
+          >
+            {{ post.body }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="openDialaog(post,false)">Goruntule</button>
+          <button mat-raised-button color="accent" (click)="openDialaog(post,true)">Duzenle</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center sticky-bottom my-3">
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="blogData.length"
+    ></ngb-pagination>
+  </div>
+</div>
