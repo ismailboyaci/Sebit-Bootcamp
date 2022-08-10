@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6 d-flex justify-content-center">
+      <form class="w-50" [formGroup]="pipeForm">
+        <h1 class="text-center">Phone Number</h1>
+        <div class=" d-flex flex-row">
+          <div class="form-group">
+            <select class="h-100" (change)="onSelect($event.target)">
+              <option>...</option>
+              <option *ngFor="let i of countries">{{i}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="text"
+              formControlName="phoneNumber"
+              (input)="onChange()"
+              [placeholder]='getPlaceHolder()'
+            />
+          </div>
+        </div>
+        <div style="margin-left:45px ;">
+          <mat-error *ngIf="pipeForm.get('phoneNumber')?.hasError('pattern')">
+            sadece number
+          </mat-error>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h1 class="d-flex justify-content-center align-items-end">Pipe Phone Number</h1>
+      <div class="d-flex justify-content-center align-items-end">
+        <h2 [ngClass]="pNumber ? '':'d-none'"> {{ulke | uppercase}} {{ pNumber | phoneNumber: ulke }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
