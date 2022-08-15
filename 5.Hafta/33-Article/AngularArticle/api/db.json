@@ -1,0 +1,67 @@
+{
+  "articles": [
+    {
+      "author": "ismail",
+      "title": "Baslik1",
+      "content": "jfvghvfhgjssasd",
+      "comments": [
+        {
+          "username": "ssa",
+          "comment": "aaa"
+        },
+        {
+          "username": "cemre",
+          "comment": "guzel"
+        },
+        {
+          "username": "aa",
+          "comment": "dddd"
+        },
+        {
+          "username": "add",
+          "comment": "dadaddad"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "author": "ismail",
+      "title": "Baslik 2",
+      "content": "deneme 3",
+      "comments": [
+        {
+          "username": "aad",
+          "comment": "dddd"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "author": "ismail",
+      "title": "Baslik 3",
+      "content": "<ul><li>ddad</li><li><span>ddd</span></li></ul><ol><li>dddd</li></ol>",
+      "comments": [
+        {
+          "username": "ad",
+          "comment": "dddd"
+        },
+        {
+          "username": "adada",
+          "comment": "daddd"
+        },
+        {
+          "username": "sadd",
+          "comment": "ddddd"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "author": "sad",
+      "title": "ffff",
+      "content": "ffffffffffffff",
+      "comments": [],
+      "id": 4
+    }
+  ]
+}

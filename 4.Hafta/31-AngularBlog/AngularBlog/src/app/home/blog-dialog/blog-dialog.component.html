@@ -1,20 +1,22 @@
 <div class="d-flex justify-content-between">
   <div class="d-flex align-items-center">
-    <h3 style="margin:0 ;">{{isUpdate ? 'Yaziyi Guncelle':'Yaziyi gor'}}</h3>
+    <h3 style="margin: 0">
+      {{ isUpdate ? "Yaziyi Guncelle" : " Yaziyi gor" }}
+    </h3>
   </div>
-  <button mat-button style="font-size: 24px;" (click)="close()">x</button>
+  <button mat-button style="font-size: 24px" (click)="close()">x</button>
 </div>
 
 <form *ngIf="isUpdate" [formGroup]="blogForm" class="example-form">
-  <mat-form-field class="example-full-width" >
+  <mat-form-field class="example-full-width">
     <mat-label>Blog Basligi</mat-label>
-    <input matInput formControlName="title">
+    <input matInput formControlName="title" />
     <mat-error *ngIf="blogForm.get('title')?.hasError('required')">
       Baslik Zorunludur
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width" >
+  <mat-form-field class="example-full-width">
     <mat-label>Blog Icerigi</mat-label>
     <textarea matInput formControlName="body" cols="40" rows="10"></textarea>
     <mat-error *ngIf="blogForm.get('body')?.hasError('required')">
@@ -22,6 +24,38 @@
     </mat-error>
   </mat-form-field>
   <div>
-    <button mat-raised-button color="primary" [disabled]="!blogForm.valid" (click)="onSubmit()">Guncelle</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!blogForm.valid"
+      (click)="onSubmit()"
+    >
+      Guncelle
+    </button>
   </div>
 </form>
+
+<div *ngIf="!isUpdate" class="container">
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <img
+        class="w-100"
+        src="assets/images/image{{ blogElement.imageId }}.jpg"
+      />
+    </div>
+    <div class="col-md-6">
+      <h2>{{ blogElement.title }}</h2>
+      <p>{{ blogElement.body }}</p>
+    </div>
+
+  </div>
+  <div class="row" *ngFor="let comment of commentData" style="background-color:lightgrey ; padding:20px; margin-bottom: 20px;">
+    <div class="col-lg-2">
+      <img src="assets/images/profile/profile{{comment.userId}}.jpg" width="50px" class="rounded-circle">
+    </div>
+    <div class="col-lg-10">
+      <h3>{{comment.name}}</h3>
+      <p>{{comment.body}} </p>
+    </div>
+  </div>
+</div>

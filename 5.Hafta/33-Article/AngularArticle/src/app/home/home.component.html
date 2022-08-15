@@ -1,0 +1,18 @@
+<div style="display: flex; justify-content: center; margin-top: 50px;">
+  <div style="width: 50%">
+    <button mat-raised-button color="primary"  routerLink="/create" > Yeni Yazi Olustur</button>
+    <mat-card  *ngFor="let item of articleData; let i = index" style="margin:30px 0 ;">
+      <mat-card-content>
+        <div [routerLink]="'/view/'+i">
+          <h1>{{ item.title }}</h1>
+          <p>
+            <span style="font-size: 16px; font-weight: 700">Yazar:</span>
+            {{ item.author }}
+          </p>
+          <p [innerHtml]="item.content"></p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
