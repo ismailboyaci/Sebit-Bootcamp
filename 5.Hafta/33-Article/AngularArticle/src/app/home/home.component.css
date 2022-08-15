@@ -1,0 +1,15 @@
+.divHome {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.width50 {
+  width: 50%;
+}
+.cardHome {
+  margin: 30px 0px;
+}
+.authorStyle {
+  font-size: 16px;
+  font-weight: 700;
+}

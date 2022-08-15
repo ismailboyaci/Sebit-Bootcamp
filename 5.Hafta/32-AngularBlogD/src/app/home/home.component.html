@@ -17,15 +17,7 @@
     >
       <mat-card class="example-card">
         <mat-card-header>
-          <mat-card-title
-            style="
-              display: -webkit-box;
-              -webkit-line-clamp: 1;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            "
-            >{{ post.title }}</mat-card-title
+          <mat-card-title class="cardTitle" >{{ post.title }}</mat-card-title
           >
         </mat-card-header>
         <img
@@ -33,15 +25,7 @@
           src="../../assets/images/image{{ post.imageId }}.jpg"
         />
         <mat-card-content>
-          <p
-            style="
-              display: -webkit-box;
-              -webkit-line-clamp: 3;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            "
-          >
+          <p class="cardContent">
             {{ post.body }}
           </p>
         </mat-card-content>

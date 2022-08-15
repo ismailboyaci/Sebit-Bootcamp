@@ -1,0 +1,12 @@
+.divArticle{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px
+}
+.example-card{
+  width: 50%;
+}
+.contentArticle{
+  display: flex;
+  flex-direction: column
+}

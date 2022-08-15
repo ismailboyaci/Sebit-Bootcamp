@@ -1,0 +1,10 @@
+.commentData {
+  background-color: lightgrey;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+.userImg {
+  width: 50px;
+  border-radius: 50%;
+}
